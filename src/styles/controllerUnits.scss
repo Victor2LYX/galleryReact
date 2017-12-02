@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "icomoon-lyx";
+    src: url("../fonts/icons/icomoon-lyx.eot") format("embedded-opentype"), url("../fonts/icons/icomoon-lyx.woff") format("woff"), url("../fonts/icons/icomoon-lyx.ttf") format("truetype"), url("../fonts/icons/icomoon-lyx.svg") format("svg");
+}
+@at-root {
+    .controller-unit {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        text-align: center;
+        cursor: pointer;
+        background-color: #aaa;
+        border-radius: 50%;
+        transform: scale(.5);
+        transition: transform .6s ease-in-out, background-color .3s;
+        &.is-center{
+            transform: scale(1.0);
+            background-color: #888;
+            &::after{
+            font-family: "icomoon-lyx";
+                content:'\e965';
+                color: white;
+                line-height: 30px;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+            &.is-inverse {
+                background-color: #555;
+                transform: rotateY(180deg);
+                backface-visibility:visible;
+            }
+        }
+
+    }
+}
